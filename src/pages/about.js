@@ -5,11 +5,11 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        contentfulPortfolioPage(pageTitle: { eq: "Welcome" }) {
+        contentfulPortfolioPage(pageTitle: { eq: "About Me" }) {
           pageContent {
             raw
           }
@@ -26,11 +26,11 @@ const IndexPage = () => {
         documentToReactComponents(
           JSON.parse(data.contentfulPortfolioPage.pageContent.raw)
         )}
-      <Link to="/about/">About Me</Link> <br />
+      <Link to="/">Home</Link> <br />
       <Link to="/portfolio/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
   )
 }
 
-export default IndexPage
+export default AboutPage
