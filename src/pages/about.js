@@ -9,7 +9,7 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        contentfulPortfolioPage(pageTitle: { eq: "About Me" }) {
+        contentfulSitePage(pageTitle: { eq: "About Me" }) {
           pageContent {
             raw
           }
@@ -21,10 +21,10 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title={data.contentfulPortfolioPage.pageTitle} />
-      {data.contentfulPortfolioPage.pageContent.raw &&
+      <SEO title={data.contentfulSitePage.pageTitle} />
+      {data.contentfulSitePage.pageContent.raw &&
         documentToReactComponents(
-          JSON.parse(data.contentfulPortfolioPage.pageContent.raw)
+          JSON.parse(data.contentfulSitePage.pageContent.raw)
         )}
       <Link to="/">Home</Link> <br />
       <Link to="/portfolio/">Go to page 2</Link> <br />
