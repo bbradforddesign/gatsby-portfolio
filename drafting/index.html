@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-blue-900 text-white h-screen flex flex-col justify-between">
+    <!--Header-->
+    <header class="flex flex-row justify-between mb-auto p-4">
+      <!--Logo-->
+      <a href="/" class="text-2xl font-black"><h1>bbradforddesign</h1></a>
+      <!--Nav-->
+      <nav>
+        <ul class="flex flex-row items-center font-medium">
+          <!--Link-->
+          <li class="mx-3 hover:text-yellow-300">
+            <a href="about.html">About Me</a>
+          </li>
+          <li class="mx-3 hover:text-yellow-300">
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="mx-3 hover:text-yellow-300">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--2 Col Content-->
+    <main class="grid grid-cols-2 mb-auto">
+      <!--Hero-->
+      <div class="flex justify-center">
+        <img
+          src="./img/profile.jpg"
+          alt="profile image"
+          class="w-40 rounded-3xl absolute z-30"
+        />
+        <div
+          class="h-60 w-40 mr-6 mt-3 rounded-3xl absolute z-20 bg-blue-400"
+        ></div>
+        <div
+          class="h-60 w-40 mr-12 mt-6 rounded-3xl absolute z-10 bg-blue-600 shadow-md"
+        ></div>
+      </div>
+      <!--Hero Text-->
+      <div>
+        <p class="text-5xl font-extrabold mb-2">
+          <span>Hello!<br />My name is</span>
+          <span class="text-yellow-300">Blake Bradford,<br /></span>
+        </p>
+        <p class="text-xl mb-6">
+          and I'm a web developer and designer from Kansas City, Missouri
+        </p>
+        <!--Button-->
+        <button
+          class="bg-yellow-300 text-blue-900 hover:bg-yellow-100 shadow-md text-lg font-bold rounded-lg px-2 py-1"
+        >
+          Nice to Meet You!
+        </button>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="flex justify-between inline-block p-4 mt-12">
+      <p>2021 Blake Bradford</p>
+      <ul class="flex flex-row items-center font-medium">
+        <!--Link-->
+        <li class="mx-3 hover:text-yellow-300"><a href="/">Logo</a></li>
+        <li class="mx-3 hover:text-yellow-300"><a href="/">Logo</a></li>
+        <li class="mx-3 hover:text-yellow-300"><a href="/">Logo</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
