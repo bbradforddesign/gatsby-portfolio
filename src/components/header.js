@@ -10,13 +10,13 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul className="flex flex-row items-center font-medium">
         <li className="mx-3 hover:text-yellow-300">
-          <Link to="/about/">About Me</a>
+          <Link to="/about/">About Me</Link>
         </li>
         <li className="mx-3 hover:text-yellow-300">
-          <Link to="/portfolio/">Portfolio</a>
+          <Link to="/portfolio/">Portfolio</Link>
         </li>
         <li className="mx-3 hover:text-yellow-300">
-          <Link to="/contact/">Contact</a>
+          <Link to="/contact/">Contact</Link>
         </li>
       </ul>
     </nav>
