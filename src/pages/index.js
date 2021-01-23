@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CTA from "../components/cta"
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -26,7 +27,7 @@ const IndexPage = () => {
         documentToReactComponents(
           JSON.parse(data.contentfulSitePage.pageContent.raw)
         )}
-      <Link to="/about/">About Me</Link> <br />
+      <CTA message="Nice to Meet You!" to="/about" />
       <Link to="/portfolio/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
