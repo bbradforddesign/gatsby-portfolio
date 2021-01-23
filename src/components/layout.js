@@ -25,19 +25,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div class="bg-blue-700 text-white h-screen flex flex-col">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </>
+      <main className="flex-grow">{children}</main>
+      <Footer />
+    </div>
   )
 }
 
