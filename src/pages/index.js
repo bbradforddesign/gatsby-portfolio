@@ -16,9 +16,10 @@ const IndexPage = () => {
           }
           pageTitle
           pageImages {
-            fixed {
+            fluid {
               src
             }
+            title
           }
         }
       }
@@ -34,8 +35,14 @@ const IndexPage = () => {
         {/** Hero Img */}
         <div className="flex justify-center">
           {data && (
-            <img src={data.contentfulSitePage.pageImages[0].fixed.src} />
+            <img
+              src={data.contentfulSitePage.pageImages[0].fluid.src}
+              alt={data.contentfulSitePage.pageImages[0].title}
+              className="w-40 rounded-3xl absolute z-30"
+            />
           )}
+          <div className="h-60 w-40 mr-6 mt-3 rounded-3xl absolute z-20 bg-blue-400"></div>
+          <div className="h-60 w-40 mr-12 mt-6 rounded-3xl absolute z-10 bg-blue-600 shadow-md"></div>
         </div>
         {/** Hero Text */}
         <div>
