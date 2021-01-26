@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header className="flex flex-row justify-between mb-auto p-4">
+  <header className="flex flex-row justify-between p-4">
     <a href="/" className="text-2xl font-black">
       <h1>{siteTitle}</h1>
     </a>
