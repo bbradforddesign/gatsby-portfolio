@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = () => (
-  <footer class="flex justify-between inline-block p-4 mt-2">
+  <footer class="flex justify-between inline-block p-4 w-full">
     <p>2021 Blake Bradford</p>
     <ul class="flex flex-row items-center font-medium">
       <li class="mx-3 hover:text-yellow-300">

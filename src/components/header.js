@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header className="flex flex-row justify-between p-4">
+  <header className="flex flex-row justify-between p-4 w-full">
     <a href="/" className="text-2xl font-black">
       <h1>{siteTitle}</h1>
     </a>
     <nav>
       <ul className="flex flex-row items-center font-medium">
         <li className="mx-3 hover:text-yellow-300">
-          <Link to="/about/">About Me</Link>
+          <Link to="/about/">About</Link>
         </li>
         <li className="mx-3 hover:text-yellow-300">
           <Link to="/portfolio/">Portfolio</Link>

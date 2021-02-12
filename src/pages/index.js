@@ -35,7 +35,7 @@ const IndexPage = () => {
         <p className="text-xl">{children}</p>
       ),
       [BLOCKS.HEADING_2]: (node, children) => (
-        <p className="text-6xl md:text-7xl font-bold">{children}</p>
+        <p className="text-6xl font-bold">{children}</p>
       ),
     },
   }
@@ -43,30 +43,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={data.pageTitle} />
-      <div className="grid grid-cols-1 mx-6 md:grid-cols-2">
-        {/** Hero Img */}
-        <div className="flex justify-center">
-          {data && (
-            <img
-              src={data.pageImages[0].fluid.src}
-              alt={data.pageImages[0].title}
-              className="w-52 md:w-72 rounded-xl shadow-2xl"
-            />
-          )}
-        </div>
-        {/** Hero Text */}
-        <div className="flex flex-col justify-center max-w-sm">
-          {data &&
-            documentToReactComponents(
-              JSON.parse(data.pageContent.raw),
-              options
-            )}
-          <CTA
-            message="Nice to Meet You"
-            to="/about"
-            align="justify-center md:justify-end"
-          />
-        </div>
+      {/** Hero Img */}
+      <div className="col-span-12 md:col-span-6 lg:col-span-8 bg-blue-100">
+        Hello
+      </div>
+      {/** Hero Text */}
+      <div className="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col bg-red-100">
+        {data &&
+          documentToReactComponents(JSON.parse(data.pageContent.raw), options)}
+        <CTA message="Learn More" to="/about" align="justify-end" />
       </div>
     </Layout>
   )

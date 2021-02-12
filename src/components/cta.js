@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const CTA = ({ message, to, align }) => {
   return (
     <Link to={to} className={`flex ${align}`}>
-      <button className="bg-yellow-300 text-blue-900 hover:bg-yellow-100 shadow-md text-lg font-bold rounded-lg px-2 py-1">
+      <button className="bg-black text-gray-100 hover:bg-gray-100 hover:text-black shadow-md text-xl font-bold rounded-md px-4 py-2">
         {message}
       </button>
     </Link>
