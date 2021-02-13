@@ -1,19 +1,31 @@
 import React from "react"
 
 const Footer = () => (
-  <footer class="flex justify-between inline-block p-4 w-full">
-    <p>2021 Blake Bradford</p>
-    <ul class="flex flex-row items-center font-medium">
-      <li class="mx-3 hover:text-yellow-300">
-        <a href="/">LinkedIn</a>
-      </li>
-      <li class="mx-3 hover:text-yellow-300">
-        <a href="/">GitHub</a>
-      </li>
-      <li class="mx-3 hover:text-yellow-300">
-        <a href="/">Email</a>
-      </li>
-    </ul>
+  <footer class="flex flex-col md:flex-row items-start justify-between inline-block w-full p-4">
+    <p class="md:flex-grow text-lg font-semibold mb-0">2021 Blake Bradford</p>
+
+    <div class="w-auto text-md">
+      <a
+        class="block mt-4 md:inline-block md:mt-0 text-gray-700 hover:text-gray-100 mr-4"
+        href="/"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        class="block mt-4 md:inline-block md:mt-0 text-gray-700 hover:text-gray-100 mr-4"
+        href="/"
+      >
+        GitHub
+      </a>
+
+      <a
+        class="block mt-4 md:inline-block md:mt-0 text-gray-700 hover:text-gray-100"
+        href="/"
+      >
+        Email
+      </a>
+    </div>
   </footer>
 )
 

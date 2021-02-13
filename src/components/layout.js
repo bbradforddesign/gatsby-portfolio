@@ -25,9 +25,9 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-200 h-screen w-screen flex flex-col justify-between px-8">
+    <div className="bg-gradient-to-b from-white to-gray-200 h-screen w-full flex flex-col justify-between px-8">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="w-full max-w-screen-2xl mx-auto grid grid-cols-12 gap-4 bg-green-100">
+      <main className="w-full max-w-screen-xl mx-auto grid grid-cols-12 gap-4">
         {children}
       </main>
       <Footer />

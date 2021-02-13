@@ -32,10 +32,10 @@ const IndexPage = () => {
   const options = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className="text-xl">{children}</p>
+        <p className="text-m">{children}</p>
       ),
       [BLOCKS.HEADING_2]: (node, children) => (
-        <p className="text-6xl font-bold">{children}</p>
+        <p className="text-4xl font-bold">{children}</p>
       ),
     },
   }
@@ -44,11 +44,11 @@ const IndexPage = () => {
     <Layout>
       <SEO title={data.pageTitle} />
       {/** Hero Img */}
-      <div className="col-span-12 md:col-span-6 lg:col-span-8 bg-blue-100">
-        Hello
+      <div className="hidden md:inline-block col-span-12 md:col-span-6">
+        Hello, Hero Image
       </div>
       {/** Hero Text */}
-      <div className="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col bg-red-100">
+      <div className="col-span-12 md:col-span-6">
         {data &&
           documentToReactComponents(JSON.parse(data.pageContent.raw), options)}
         <CTA message="Learn More" to="/about" align="justify-end" />
