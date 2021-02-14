@@ -44,9 +44,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title={data.pageTitle} />
       {/** Hero Img */}
-      <div className="hidden md:inline-block col-span-12 md:col-span-6">
-        Hello, Hero Image
-      </div>
+      <div className="hidden md:inline-block col-span-12 md:col-span-6" />
+
       {/** Hero Text */}
       <div className="col-span-12 md:col-span-6">
         {data &&

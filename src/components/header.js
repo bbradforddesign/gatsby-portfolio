@@ -6,8 +6,8 @@ const Header = ({ siteTitle }) => {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <header className="flex items-center justify-between flex-wrap p-6">
-      <h1 className="font-extrabold text-xl tracking-tight mb-0">
+    <header className="flex items-center justify-between flex-wrap pt-4">
+      <h1 className="font-bold text-xl tracking-tight mb-0">
         <Link>{siteTitle}</Link>
       </h1>
       <div className="block md:hidden">
@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full block md:flex md:items-center md:w-auto`}
+        } z-20 absolute top-12 left-0 pl-4 w-96 ml-8 bg-gray-400 block rounded-b-2xl md:bg-transparent md:static md:flex md:items-center md:w-auto`}
       >
         <nav className="text-md md:flex-grow">
           <Link
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => {
           </Link>
           <Link
             to={`/contact`}
-            className="block mt-4 md:inline-block md:mt-0 text-gray-700 hover:text-gray-100"
+            className="block my-4 md:inline-block md:mt-0 text-gray-700 hover:text-gray-100"
           >
             Contact
           </Link>
