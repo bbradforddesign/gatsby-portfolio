@@ -7,9 +7,9 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header className="flex items-center justify-between flex-wrap pt-4">
-      <h1 className="font-bold text-xl tracking-tight mb-0">
-        <Link>{siteTitle}</Link>
-      </h1>
+      <Link to="/">
+        <h1 className="font-bold text-xl tracking-tight mb-0">{siteTitle}</h1>
+      </Link>
       <div className="block md:hidden">
         <button
           onClick={() => toggleExpansion(!isExpanded)}

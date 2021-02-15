@@ -44,22 +44,20 @@ const AboutPage = () => {
     <Layout>
       <SEO title={data.pageTitle} />
       {/** Hero Img */}
-      <div
-        className="mx-auto -my-4 col-span-12 md:col-span-4"
-        style={{ width: "200px", clipPath: "inset(30px 0px 50px)" }}
-      >
+      <div className="flex flex-col justify-center items-center col-span-12 md:col-span-6">
         {data && (
           <img
+            className="rounded-2xl w-4/5 object-cover profile-image"
             src={data.pageImages[0].fluid.src}
             alt={data.pageImages[0].title}
           />
         )}
       </div>
       {/** Hero Text */}
-      <div className="col-span-12 max-w-prose md:col-span-8">
+      <div className="col-span-12 max-w-prose md:col-span-6">
         {data &&
           documentToReactComponents(JSON.parse(data.pageContent.raw), options)}
-        <CTA message="Learn More" to="/about" align="justify-end" />
+        <CTA message="Explore my Work" to="/portfolio" align="justify-end" />
       </div>
     </Layout>
   )

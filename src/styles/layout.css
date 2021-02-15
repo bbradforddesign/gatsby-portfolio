@@ -600,3 +600,8 @@ pre tt:after {
 body {
   min-width: 320px;
 }
+
+.profile-image {
+  height: 45vh;
+  object-position: 50% 15%;
+}

@@ -2,8 +2,8 @@ import React from "react"
 import Skyline from "../assets/skyline.svg"
 
 const Footer = () => (
-  <footer class="">
-    <Skyline className="w-full max-w-screen-sm" />
+  <footer>
+    <Skyline className="w-full max-w-screen-sm -mb-1" />
     <div class="bg-black flex flex-col md:flex-row items-start justify-between inline-block w-full p-4">
       <p class="text-white md:flex-grow text-sm font-semibold mb-0">
         2021 Blake Bradford
