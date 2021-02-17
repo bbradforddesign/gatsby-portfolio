@@ -47,7 +47,7 @@ const AboutPage = () => {
       <div className="flex flex-col justify-center items-center col-span-12 md:col-span-6">
         {data && (
           <img
-            className="rounded-2xl w-4/5 object-cover profile-image"
+            className="rounded-xl w-1/2 object-cover profile-image max-w-xs md:w-3/4"
             src={data.pageImages[0].fluid.src}
             alt={data.pageImages[0].title}
           />
