@@ -44,10 +44,10 @@ const IndexPage = () => {
     <Layout>
       <SEO title={data.pageTitle} />
       {/** Hero Img */}
-      <div className="hidden md:inline-block col-span-12 md:col-span-6" />
+      <div className="hidden lg:inline-block col-span-12 lg:col-span-6" />
 
       {/** Hero Text */}
-      <div className="col-span-12 md:col-span-6">
+      <div className="col-span-12 lg:col-span-6">
         {data &&
           documentToReactComponents(JSON.parse(data.pageContent.raw), options)}
         <CTA message="Learn More" to="/about" align="justify-end" />

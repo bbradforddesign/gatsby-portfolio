@@ -621,3 +621,7 @@ body {
     width: auto;
   }
 }
+
+.tech-icon svg {
+  fill: black;
+}

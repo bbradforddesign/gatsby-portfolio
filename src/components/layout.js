@@ -27,9 +27,7 @@ const Layout = ({ children }) => {
   return (
     <div className="h-screen w-full flex flex-col justify-between px-8">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="my-8 max-w-screen-xl grid grid-cols-12 gap-4 mx-auto">
-        {children}
-      </main>
+      <main className="my-8 mx-auto max-w-screen-xl">{children}</main>
       <Footer />
     </div>
   )

@@ -1,16 +1,69 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Project from "../components/project"
 import SEO from "../components/seo"
+import CTA from "../components/cta"
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const AboutPage = () => {
+  const response = useStaticQuery(
+    graphql`
+      query {
+        contentfulSitePage(pageTitle: { eq: "Portfolio" }) {
+          pageTitle
+        }
+        allContentfulProject {
+          edges {
+            node {
+              id
+              projectUrl
+              projectTechnologies {
+                technologyTitle
+                technologyUrl
+                technologyLogo {
+                  file {
+                    url
+                  }
+                }
+              }
+              projectSummary {
+                projectSummary
+              }
+              projectThumbnail {
+                fluid {
+                  src
+                }
+              }
+              projectDate(formatString: "MM/YYYY")
+              projectTitle
+              projectOverview {
+                raw
+              }
+            }
+          }
+        }
+      }
+    `
+  )
 
-export default SecondPage
+  const projects = response.allContentfulProject.edges
+
+  const pageData = response.contentfulSitePage
+
+  return (
+    <Layout>
+      <SEO title={pageData.pageTitle} />
+      {/** Page Title */}
+      <h2 className="text-4xl text-center lg:text-left">
+        {pageData.pageTitle}
+      </h2>
+      {/** Hero Text */}
+      {projects.map(project => {
+        return <Project project={project.node} />
+      })}
+    </Layout>
+  )
+}
+
+export default AboutPage
